@@ -21,7 +21,9 @@ node_modules/
 # Sistema
 .DS_Store
 
-# Claude Code: configuración personal y registro local de sesiones
+# Claude Code: .claude/ se versiona (agentes, skills, settings.json compartido),
+# salvo la configuración personal, el registro local de sesiones y los worktrees
 .claude/settings.local.json
-.claude/hooks/
+.claude/hooks/sesiones.py
+.claude/worktrees/
 sesiones.md
