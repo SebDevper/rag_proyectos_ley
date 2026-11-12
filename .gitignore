@@ -1,0 +1,22 @@
+# Corpus descargado y derivados (no se versiona)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Cloudflare
+node_modules/
+.wrangler/
+.dev.vars
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
