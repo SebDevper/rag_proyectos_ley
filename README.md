@@ -63,6 +63,7 @@ Detalle en [docs/fuente-de-datos.md](docs/fuente-de-datos.md) y análisis legal 
 | Despliegue | ✅ Local primero; Cloudflare (free tier) como destino |
 | Alcance de la fase 1 | 🟡 Propuesto: periodo legislativo actual |
 | Lenguajes | 🟡 Propuesto: Python (ingesta) y TypeScript (Worker de consulta) |
+| Base de datos y vector store | ✅ Todo en Cloudflare: D1 (SQLite + FTS5) para metadatos, tramitación y texto; Vectorize para la búsqueda semántica. Se descartó Postgres + pgvector externo para usar un solo proveedor; la interfaz del vector store permite migrar si el límite de dimensiones aprieta |
 | Proveedor de embeddings | ✅ Workers AI (API REST): el corpus y las preguntas se vectorizan con el mismo modelo y backend, sin costo en la capa gratuita |
 | Modelo de embeddings y chunking | ⏳ Se decide tras medir el corpus; candidatos: `bge-m3` y `qwen3-embedding-0.6b` (512 dims) |
 | LLM | ⏳ Pendiente |
