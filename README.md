@@ -63,7 +63,8 @@ Detalle en [docs/fuente-de-datos.md](docs/fuente-de-datos.md) y análisis legal 
 | Despliegue | ✅ Local primero; Cloudflare (free tier) como destino |
 | Alcance de la fase 1 | 🟡 Propuesto: periodo legislativo actual |
 | Lenguajes | 🟡 Propuesto: Python (ingesta) y TypeScript (Worker de consulta) |
-| Modelo de embeddings y chunking | ⏳ Se decide tras medir el corpus |
+| Proveedor de embeddings | ✅ Workers AI (API REST): el corpus y las preguntas se vectorizan con el mismo modelo y backend, sin costo en la capa gratuita |
+| Modelo de embeddings y chunking | ⏳ Se decide tras medir el corpus; candidatos: `bge-m3` y `qwen3-embedding-0.6b` (512 dims) |
 | LLM | ⏳ Pendiente |
 | Interfaz | ⏳ Pendiente |
 | Licencia del código | ⏳ Pendiente |
