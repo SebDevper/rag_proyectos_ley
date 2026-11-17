@@ -54,6 +54,31 @@ Detalle en [docs/fuente-de-datos.md](docs/fuente-de-datos.md) y análisis legal 
 - **Local primero, portable a Cloudflare** (capa gratuita: Workers, D1, Vectorize, R2 y Workers AI). Ver [docs/despliegue.md](docs/despliegue.md).
 - **Híbrido RAG + datos estructurados:** el contenido de los proyectos se busca con RAG; la etapa, las fechas y las votaciones se consultan como datos.
 
+## Uso
+
+Requiere Python 3.12 o superior. La ingesta usa solo la biblioteca estándar.
+
+```bash
+cp .env.example .env                              # ajustar FECHA_DESDE si hace falta
+python3 -m proyectos_ley.ingesta.descargar        # servicios web → data/raw
+python3 -m proyectos_ley.ingesta.cargar           # data/raw → data/proyectos.sqlite
+python3 -m unittest discover -s tests -t .        # tests
+```
+
+**Descarga** (`descargar`): pide los listados anuales de la Cámara, filtra los proyectos ingresados desde `FECHA_DESDE` y, por cada boletín, guarda la ficha de la Cámara, el documento de ingreso (PDF) y la tramitación del Senado. Hace una solicitud a la vez con pausas de 1 a 2 segundos y no vuelve a pedir lo que ya está en `data/raw`. La tramitación cambia con el tiempo y se refresca con `--actualizar-tramitacion`.
+
+**Carga** (`cargar`): lee solo `data/raw`, sin red, y llena la base SQLite ([esquema](proyectos_ley/db/esquema.sql), compatible con D1). La base se puede borrar y regenerar en cualquier momento.
+
+```
+data/raw/
+├── camara/listados/{mociones,mensajes}_2026.xml
+├── camara/proyectos/{boletín}/ficha.xml
+├── camara/proyectos/{boletín}/documento_ingreso.pdf
+└── senado/tramitacion/{boletín}.xml
+```
+
+El almacén crudo y la base se usan mediante interfaces (`AlmacenCrudo`, `BaseDatos`) con una implementación local. Las de Cloudflare (R2 y D1) se agregan al migrar, sin cambiar la ingesta.
+
 ## Decisiones
 
 | Tema | Estado |
