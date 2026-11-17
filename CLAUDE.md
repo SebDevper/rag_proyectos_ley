@@ -53,7 +53,7 @@ Todo se construye y prueba en local, pero debe poder migrarse a la capa gratuita
 
 ## Reglas de datos
 
-- **Nunca descargar ni llamar a servicios o APIs externas sin consentimiento explícito del usuario:** servicios del Congreso, Workers AI, Cloudflare u otros, incluidas las pruebas exploratorias con `curl` y los scripts de ingesta. Antes de cada ejecución que use la red, explicar qué se llamará, cuántas solicitudes aproximadas y para qué, y esperar la aprobación. El consentimiento vale para esa ejecución, no para las siguientes.
+- **Nunca descargar ni llamar a servicios o APIs externas sin consentimiento explícito del usuario:** servicios del Congreso, Workers AI, Cloudflare u otros, incluidas las pruebas exploratorias con `curl` y los scripts de ingesta. Antes de cada ejecución que use la red, explicar qué se llamará, cuántas solicitudes aproximadas y para qué, y esperar la aprobación. El consentimiento vale para esa ejecución, no para las siguientes. Buscar y leer documentación pública en la web no requiere consentimiento.
 - **Descarga responsable:** una solicitud a la vez, pausas de 1 a 2 segundos, caché local y sin volver a descargar boletines ya obtenidos (salvo para actualizar su tramitación).
 - **El corpus no va al repositorio:** `data/` está en `.gitignore`.
 - **Citas obligatorias:** toda respuesta cita boletín, documento o trámite con enlace a la fuente oficial. Si no hay respaldo, el sistema lo dice.
