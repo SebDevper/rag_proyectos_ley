@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProyectoLey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://opendata.camara.cl/camaradiputados/v1">
+  <Id>18778</Id>
+  <NumeroBoletin>18115-27</NumeroBoletin>
+  <Nombre>Regula la residencia, permanencia y el traslado hacia y desde el territorio especial del Archipiélago Juan Fernández e incorpora las Islas Desventuradas a la comuna de Juan Fernández</Nombre>
+  <FechaIngreso>2026-03-06T00:00:00</FechaIngreso>
+  <TipoIniciativa Valor="1">Mensaje</TipoIniciativa>
+  <CamaraOrigen Valor="2">Senado</CamaraOrigen>
+  <MinisteriosPatrocinantes>
+    <Ministerio><Id>225</Id><Nombre>Ministerio del Interior</Nombre></Ministerio>
+    <Ministerio><Id>226</Id><Nombre>Ministerio de Seguridad Pública</Nombre></Ministerio>
+  </MinisteriosPatrocinantes>
+  <Votaciones />
+  <Materias />
+  <Admisible>true</Admisible>
+</ProyectoLey>

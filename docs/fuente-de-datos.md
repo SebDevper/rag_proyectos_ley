@@ -12,6 +12,10 @@ Portal: [opendata.camara.cl](https://opendata.camara.cl/), una iniciativa conjun
 GET https://tramitacion.senado.cl/wspublico/tramitacion.php?boletin=8575-05
 ```
 
+> **Usar el número sin el sufijo de comisión** (`boletin=18882`, no `18882-25`). Verificado el 16-11-2026: con el sufijo, los proyectos recientes responden "No existe el número de boletín". El XML trae igualmente el boletín completo en `<boletin>`.
+>
+> Cuando el boletín no existe (o el Senado aún no lo registra), el servicio responde **HTTP 200 con un fragmento HTML**, no XML. Hay que detectarlo antes de parsear.
+
 Devuelve XML (`application/xml`, ~64 KB para un proyecto largo):
 
 ```xml
@@ -172,5 +176,5 @@ Las mociones parlamentarias tienen un formato más variable: fundamentos y artic
 
 - Servicios antiguos (ASMX/PHP): una solicitud a la vez, con pausas de 1 a 2 segundos.
 - Caché local: no volver a descargar un boletín ya obtenido, salvo para actualizar su tramitación.
-- Guardar siempre el XML crudo y el PDF decodificado como fuente de verdad.
+- Guardar siempre las respuestas crudas como fuente de verdad: los XML tal como llegan y el documento de ingreso decodificado (el XML que lo envuelve en base64 no se guarda, porque solo agrega nombre y tipo de archivo).
 - User-Agent genérico del proyecto.

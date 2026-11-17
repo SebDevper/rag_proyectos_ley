@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProyectoLey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://opendata.camara.cl/camaradiputados/v1">
+  <Id>19553</Id>
+  <NumeroBoletin>18882-25</NumeroBoletin>
+  <Nombre>Proyecto de ley que deroga la ley N°19.856 y establece un régimen transitorio para las solicitudes de reducción de condena en tramitación</Nombre>
+  <FechaIngreso>2026-11-10T00:00:00</FechaIngreso>
+  <TipoIniciativa Valor="2">Moción</TipoIniciativa>
+  <CamaraOrigen Valor="2">Senado</CamaraOrigen>
+  <Autores>
+    <ParlamentarioAutor>
+      <Orden>0</Orden>
+      <Senador>
+        <Id>1117</Id>
+        <Nombre>Iván</Nombre>
+        <ApellidoPaterno>Moreira</ApellidoPaterno>
+        <ApellidoMaterno>Barros</ApellidoMaterno>
+      </Senador>
+    </ParlamentarioAutor>
+    <ParlamentarioAutor>
+      <Orden>0</Orden>
+      <Senador>
+        <Id>1340</Id>
+        <Nombre>Gustavo</Nombre>
+        <ApellidoPaterno>Sanhueza</ApellidoPaterno>
+        <ApellidoMaterno>Dueñas</ApellidoMaterno>
+      </Senador>
+    </ParlamentarioAutor>
+    <ParlamentarioAutor>
+      <Orden>0</Orden>
+      <Senador>
+        <Id>1342</Id>
+        <Nombre>Enrique</Nombre>
+        <ApellidoPaterno>Van Rysselberghe</ApellidoPaterno>
+        <ApellidoMaterno>Herrera</ApellidoMaterno>
+      </Senador>
+    </ParlamentarioAutor>
+  </Autores>
+  <Votaciones />
+  <Materias />
+  <Admisible>true</Admisible>
+</ProyectoLey>

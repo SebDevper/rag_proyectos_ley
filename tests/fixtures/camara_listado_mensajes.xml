@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProyectosLeyColeccion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://opendata.camara.cl/camaradiputados/v1">
+  <ProyectoLey>
+    <Id>18778</Id>
+    <NumeroBoletin>18115-27</NumeroBoletin>
+    <Nombre>Regula la residencia, permanencia y el traslado hacia y desde el territorio especial del Archipiélago Juan Fernández e incorpora las Islas Desventuradas a la comuna de Juan Fernández</Nombre>
+    <FechaIngreso>2026-03-06T00:00:00</FechaIngreso>
+    <TipoIniciativa Valor="1">Mensaje</TipoIniciativa>
+    <CamaraOrigen Valor="2">Senado</CamaraOrigen>
+    <Admisible>true</Admisible>
+  </ProyectoLey>
+  <ProyectoLey>
+    <Id>19411</Id>
+    <NumeroBoletin>18730-29</NumeroBoletin>
+    <Nombre>Modifica el Capítulo VI del Título II del Libro I del Código del Trabajo, para ampliar la relación especial de trabajo a deportistas de modalidades o especialidades deportivas distintas al fútbol profesional</Nombre>
+    <FechaIngreso>2026-10-07T00:00:00</FechaIngreso>
+    <TipoIniciativa Valor="1">Mensaje</TipoIniciativa>
+    <CamaraOrigen Valor="1">Cámara de Diputados</CamaraOrigen>
+    <Admisible>true</Admisible>
+  </ProyectoLey>
+</ProyectosLeyColeccion>
