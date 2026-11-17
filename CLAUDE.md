@@ -20,12 +20,14 @@ Asistente (RAG + datos estructurados) sobre los proyectos de ley del Congreso Na
 ## Flujo de trabajo con Git
 
 1. Trabajar **solo en la rama `development`**. Nunca commitear ni hacer push directo a `main`.
-2. Antes de empezar, sincronizar: `git fetch` y verificar que `development` esté al día con `origin/development` (cuando exista el remoto).
-3. Hacer commit de los cambios y push a `origin/development`.
-4. **Revisar el estado de los PR antes de crear o editar uno:** `gh pr list --state all`.
-   - Si hay un PR abierto desde `development`, el push ya lo actualiza; ajustar título y descripción si cambia el alcance.
-   - Si el último PR ya fue mergeado, **no editarlo**: abrir uno nuevo `development → main`.
+2. Antes de empezar, sincronizar: `git fetch` y verificar que `development` esté al día con `origin/development` y que incluya `origin/main` (si `main` tiene merges que `development` no tiene, integrarlos con `git merge origin/main`).
+3. **Antes de cada push, revisar el estado del PR:** `gh pr list --state all`. El usuario puede mergear o cerrar un PR en cualquier momento, incluso a mitad de una sesión, así que no basta con haberlo revisado al inicio.
+   - **PR abierto** desde `development`: el push lo actualiza; ajustar título y descripción si cambia el alcance.
+   - **PR mergeado o cerrado:** no editarlo ni darlo por actualizado. Después del push, abrir un PR nuevo `development → main`.
+   - Tras crear o actualizar un PR, confirmar con `git log origin/main..origin/development` qué commits incluye: todo commit que no esté en `main` debe quedar cubierto por un PR abierto.
+4. Hacer commit de los cambios y push a `origin/development`.
 5. El usuario revisa y aprueba el PR. **Nunca mergear PRs por cuenta propia.**
+6. Si `gh pr edit` falla con un error de "Projects (classic)", editar el PR con la API REST: `gh api -X PATCH repos/{owner}/{repo}/pulls/{n} -f title=... -f body=...`.
 
 ## Desarrollo: local primero, portable a Cloudflare
 
