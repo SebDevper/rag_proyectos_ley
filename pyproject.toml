@@ -1,0 +1,8 @@
+[project]
+name = "proyectos-ley"
+version = "0.1.0"
+description = "Asistente RAG sobre los proyectos de ley del Congreso Nacional de Chile"
+readme = "README.md"
+requires-python = ">=3.12"
+# La ingesta usa solo la biblioteca estándar de Python.
+dependencies = []
